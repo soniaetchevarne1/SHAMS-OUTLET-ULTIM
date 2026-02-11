@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shams Outlet | Exclusive Premium Milano Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #080808;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      .font-heading {
+        font-family: 'Syncopate', sans-serif;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .neo-glow {
+        box-shadow: 0 4px 25px rgba(46, 91, 255, 0.3);
+      }
+      .hover-glow:hover {
+        box-shadow: 0 10px 40px rgba(46, 91, 255, 0.4);
+        border-color: rgba(46, 91, 255, 0.3);
+      }
+      .bg-vibrant-gradient {
+        background: linear-gradient(135deg, #2E5BFF 0%, #FF2E97 100%);
+      }
+      .text-vibrant {
+        background: linear-gradient(135deg, #2E5BFF 0%, #FF2E97 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      /* Luxury Grid & Texture */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: 
+          radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+        background-size: 40px 40px;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      /* Dramatic Milano Light Blobs */
+      .bg-blob {
+        position: fixed;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        filter: blur(140px);
+        z-index: -2;
+        opacity: 0.25;
+        pointer-events: none;
+        animation: drift 20s infinite alternate;
+      }
+      .blob-1 { top: -200px; right: -100px; background: #2E5BFF; animation-delay: 0s; }
+      .blob-2 { bottom: -200px; left: -100px; background: #FF2E97; animation-delay: -5s; }
+      .blob-3 { top: 40%; left: -300px; background: #2E5BFF; opacity: 0.15; animation-delay: -10s; }
+
+      @keyframes drift {
+        from { transform: translate(0, 0) scale(1); }
+        to { transform: translate(100px, 50px) scale(1.1); }
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #080808;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2E5BFF;
+        border-radius: 10px;
+      }
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        display: flex;
+        width: 200%;
+        animation: marquee 30s linear infinite;
+      }
+
+      /* Noise Texture Overlay */
+      .noise {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: url('https://grainy-gradients.vercel.app/noise.svg');
+        opacity: 0.05;
+        pointer-events: none;
+        z-index: 9999;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div class="noise"></div>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+    <div id="root"></div>
+  </body>
+</html>
